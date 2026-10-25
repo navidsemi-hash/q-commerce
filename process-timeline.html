@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Story — Snapp Market Order Updates</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#fafaf8; --ink:#111; --text-2:#555; --text-3:#8a8a8a; --line:#e2e2e0; --card:#fff;
+    --accent:#FF6B35;
+    --sans:"Inter","Helvetica Neue",Arial,system-ui,sans-serif;
+    --mono:"JetBrains Mono",ui-monospace,monospace;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){ --paper:#0f0f0f; --ink:#f1f1ef; --text-2:#b8b8b8; --text-3:#7d7d7d; --line:#2a2a2a; --card:#161616; }
+  }
+  :root[data-theme="dark"]{ --paper:#0f0f0f; --ink:#f1f1ef; --text-2:#b8b8b8; --text-3:#7d7d7d; --line:#2a2a2a; --card:#161616; }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--paper);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased}
+  .wrap{max-width:720px;margin:0 auto;padding:0 24px}
+
+  header{padding:96px 0 56px}
+  .kicker{font-family:var(--mono);font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent)}
+  h1{font-weight:200;font-size:clamp(38px,6vw,60px);line-height:1.05;letter-spacing:-.03em;margin:18px 0 20px}
+  .intro{font-size:19px;line-height:1.6;color:var(--text-2);font-weight:300}
+
+  .story{position:relative;padding:8px 0 40px 40px}
+  .story::before{content:"";position:absolute;left:7px;top:14px;bottom:60px;width:2px;background:var(--line)}
+  .chapter{position:relative;padding-bottom:56px}
+  .chapter::before{content:"";position:absolute;left:-40px;top:8px;width:16px;height:16px;border-radius:50%;
+    background:var(--paper);border:2px solid var(--accent)}
+  .chapter.big::before{background:var(--accent)}
+  .num{font-family:var(--mono);font-size:12px;letter-spacing:.16em;color:var(--text-3)}
+  h2{font-weight:500;font-size:24px;letter-spacing:-.015em;margin:6px 0 14px}
+  p{font-size:18px;line-height:1.7;color:var(--text-2);margin-bottom:14px}
+  p strong{color:var(--ink);font-weight:600}
+  .pull{font-size:21px;line-height:1.5;color:var(--ink);font-weight:300;border-left:3px solid var(--accent);padding:4px 0 4px 18px;margin:22px 0}
+
+  .shots{display:flex;gap:12px;margin:22px 0 6px;overflow-x:auto;padding-bottom:6px}
+  .shots figure{flex:0 0 auto}
+  .shots img{height:260px;aspect-ratio:390/844;object-fit:cover;object-position:top;border-radius:14px;border:1px solid var(--line);display:block;background:#fff}
+  .shots figcaption{font-size:13px;color:var(--text-3);margin-top:8px;max-width:120px;line-height:1.4}
+
+  .numbers{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:14px;overflow:hidden;margin:22px 0}
+  .numbers div{background:var(--card);padding:20px 22px}
+  .numbers b{display:block;font-weight:200;font-size:44px;line-height:1;letter-spacing:-.03em}
+  .numbers b.acc{color:var(--accent)}
+  .numbers span{font-size:14px;color:var(--text-2)}
+
+  .end{border-top:1px solid var(--line);padding:48px 0 80px}
+  .end p{font-size:24px;line-height:1.45;color:var(--ink);font-weight:300}
+  .end small{display:block;margin-top:28px;font-size:14px;color:var(--text-3)}
+
+  @media (max-width:560px){
+    header{padding:64px 0 40px}
+    .story{padding-left:32px}
+    .story::before{left:5px}
+    .chapter::before{left:-32px;width:14px;height:14px}
+    p{font-size:17px}
+    .shots img{height:220px}
+    .numbers b{font-size:36px}
+  }
+</style>
+</head>
+<body>
+
+<header><div class="wrap">
+  <div class="kicker">Snapp Market · Order Updates</div>
+  <h1>How a cancellation number turned into a fix</h1>
+  <p class="intro">The story of the project, from the first question to the final result.</p>
+</div></header>
+
+<main><div class="wrap">
+<div class="story">
+
+  <section class="chapter">
+    <div class="num">01</div>
+    <h2>The problem</h2>
+    <p>The company had a significant order-cancellation problem. I was told that <strong>approximately 15–20% of orders were being cancelled</strong>.</p>
+    <p>But that number didn't explain <em>why</em> customers were cancelling — or what we should change.</p>
+  </section>
+
+  <section class="chapter">
+    <div class="num">02</div>
+    <h2>Looking behind the number</h2>
+    <p>I took a more investigative approach. Instead of jumping straight into design, <strong>I asked to review the most repetitive customer support tickets</strong>.</p>
+    <p>This shifted the focus from a high-level business metric to the actual customer journey.</p>
+  </section>
+
+  <section class="chapter">
+    <div class="num">03</div>
+    <h2>Making sure it was real</h2>
+    <p>A few complaints don't make a trend. So I <strong>reviewed the ticket patterns with a data analyst</strong> to confirm what I was seeing was real.</p>
+  </section>
+
+  <section class="chapter big">
+    <div class="num">04</div>
+    <h2>Finding the root cause</h2>
+    <p>Then I followed the customer journey after checkout. The problem became clear: <strong>once an order was paid, it was locked</strong>.</p>
+    <p>If a customer forgot an item, they had only three bad choices — place a second order and pay delivery again, cancel and re-order everything, or simply give up.</p>
+    <div class="shots">
+      <figure><img src="images/new/old-locked.webp" alt="Old order screen: only Track order and Cancel order"><figcaption>The order locks after checkout</figcaption></figure>
+      <figure><img src="images/new/old-second-order.webp" alt="Second order checkout with another delivery fee"><figcaption>A second order, a second fee</figcaption></figure>
+      <figure><img src="images/new/old-cancel.webp" alt="Cancel order confirmation"><figcaption>Cancel and start again</figcaption></figure>
+      <figure><img src="images/new/old-review.webp" alt="Low rating: couldn't change my order"><figcaption>Or give up — and lose trust</figcaption></figure>
+    </div>
+  </section>
+
+  <section class="chapter">
+    <div class="num">05</div>
+    <h2>How big was it?</h2>
+    <p>I ran a survey with 100 users. <strong>81% had forgotten an item</strong> at least once. Most of them placed a new order or did nothing at all — the app gave them no better option.</p>
+  </section>
+
+  <section class="chapter">
+    <div class="num">06</div>
+    <h2>What operations could handle</h2>
+    <p>A fix also had to work for the stores. I visited <strong>4 vendors in Tehran</strong>: packing an order takes 5–10 minutes, and vendors were already adding forgotten items by hand, for cash.</p>
+  </section>
+
+  <section class="chapter big">
+    <div class="num">07</div>
+    <h2>Changing the business team's mind</h2>
+    <p>The business team said no at first. Duplicate orders brought in extra delivery fees, editing sounded too complex, and it didn't feel urgent.</p>
+    <p>I came back with the evidence: one-item orders waste trips meant for big baskets, and paying twice frustrates customers and erodes trust. And I offered a safe version of the idea:</p>
+    <p class="pull">Let customers <strong>add</strong> items — not remove them — for the first <strong>15 minutes</strong> after ordering.</p>
+    <p>Fifteen minutes fit inside the packing time. Adding is simple for stores, while removing would mean repacking and refunds. <strong>They agreed.</strong></p>
+  </section>
+
+  <section class="chapter">
+    <div class="num">08</div>
+    <h2>Designing it</h2>
+    <p>The order card shows a calm countdown, a clear <strong>Add item</strong> button and a short note about the 15-minute rule. I put the same card on the Home screen, where people land.</p>
+    <p>AI suggested adding an upsell popup and a "1 minute left!" alert. I said no — someone fixing a mistake needs calm, not pressure.</p>
+    <div class="shots">
+      <figure><img src="images/new/new-home.webp" alt="Home with the active order and countdown"><figcaption>The order on Home</figcaption></figure>
+      <figure><img src="images/new/new-orders.webp" alt="Orders screen with Add item"><figcaption>Time left to add items</figcaption></figure>
+      <figure><img src="images/new/new-pay-added.webp" alt="Pay only for the added item"><figcaption>Pay only for the new item</figcaption></figure>
+    </div>
+  </section>
+
+  <section class="chapter">
+    <div class="num">09</div>
+    <h2>Planning for what could go wrong</h2>
+    <p>I worked through the edge cases with engineering: if an item is out of stock, the button turns off. If the price changes, the new price is shown. If time runs out, the button becomes <strong>Order again</strong>. If payment fails, the original order still goes through. And stores can't start packing until the 15 minutes are over.</p>
+    <div class="shots">
+      <figure><img src="images/new/edge-out-of-stock.webp" alt="Out of stock state"><figcaption>Out of stock</figcaption></figure>
+      <figure><img src="images/new/new-times-up.webp" alt="Time's up: Order again"><figcaption>Time's up</figcaption></figure>
+      <figure><img src="images/new/edge-payment-failed.webp" alt="Payment failed, order kept"><figcaption>Payment fails</figcaption></figure>
+      <figure><img src="images/new/vendor-locked.webp" alt="Vendor app: packing locked"><figcaption>Store waits</figcaption></figure>
+    </div>
+  </section>
+
+  <section class="chapter">
+    <div class="num">10</div>
+    <h2>Testing it with people</h2>
+    <p>I tested the design with 10 users. Moving the active order onto the Home screen made a big difference — <strong>misclicks dropped from 24% to 6%</strong>, and everyone completed the task.</p>
+  </section>
+
+  <section class="chapter big">
+    <div class="num">11</div>
+    <h2>Launch and results</h2>
+    <p>We launched it as a <strong>4-week A/B test on about 500,000 real orders</strong>. Compared with the old experience:</p>
+    <div class="numbers">
+      <div><b class="acc">−38%</b><span>order cancellations</span></div>
+      <div><b>−58%</b><span>support inquiries</span></div>
+      <div><b>+22%</b><span>customer retention</span></div>
+      <div><b>+15%</b><span>average order value</span></div>
+    </div>
+    <p>There was one hiccup: in the first week, people asked how to <em>remove</em> items. A short explanation in the app fixed it by week two.</p>
+  </section>
+
+  <section class="chapter">
+    <div class="num">12</div>
+    <h2>What happened next</h2>
+    <p>The feature ran for about three months, until Iran's internet blackout disrupted operations and cut the longer review short.</p>
+    <p>Next on the list were removing items with refunds, a longer window for Snapp Pro members, and smart reminders for items people usually buy.</p>
+  </section>
+
+</div>
+</div></main>
+
+<footer class="end"><div class="wrap">
+  <p>It started with a number. By asking why, it ended with a fix to the real problem — and 38% fewer cancellations.</p>
+  <small>Navid Semi · Product Designer · navidsemi.com</small>
+</div></footer>
+
+</body>
+</html>
