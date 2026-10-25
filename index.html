@@ -3,9 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Order Updates — Snapp Market Case Study</title>
+<title>Redesigning Post-Checkout for Q-Commerce</title>
 <meta name="description" content="Case study: how a 15-minute post-checkout editing window cut Snapp Market's order cancellations 38% and support tickets 58% — by Navid Semi, Product Designer.">
-<link rel="icon" type="image/png" href="images/snapp-icon.png">
+<link rel="icon" type="image/svg+xml" href="images/favicon-light.svg" media="(prefers-color-scheme: light)">
+<link rel="icon" type="image/svg+xml" href="images/favicon-dark.svg" media="(prefers-color-scheme: dark)">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&family=JetBrains+Mono:wght@300;400;500;600&family=Noto+Sans+SC:wght@200;300;400;500;700;900&display=swap" rel="stylesheet">
@@ -1442,6 +1443,13 @@
   .nx-learn .sub-card{background:#fff;border-radius:10px;padding:2vh 1.2vw;gap:.6vh}
   .nx-learn b{font-family:var(--sans);font-weight:200;font-size:min(2.6vw,4.6vh);line-height:1;color:var(--text-primary)}
   .nx-learn .accent b,.nx-learn .accent .t,.nx-learn .accent .d{color:#fff}
+
+  /* ============ Password page · centered ============ */
+  .nda-gate{justify-content:center}
+  .nda-card{text-align:center;margin:0 auto}
+  .nda-card h1,.nda-card p{margin-left:auto;margin-right:auto}
+  .nda-input{text-align:center}
+  .nda-gate .nda-foot{justify-content:center}
 </style>
 </head>
 <body class="canvas-mode nda-locked">
@@ -1451,15 +1459,15 @@
   <div class="nda-card" id="ndaCard">
     <div class="nda-tag">Confidential · NDA</div>
     <h1 id="ndaTitle">Enter password to view</h1>
-    <p>This case study contains confidential Snapp Market research and product data. Please enter the password you were given.</p>
+    <p>This case study contains confidential research and product data. Please enter the password you were given.</p>
     <form class="nda-form" id="ndaForm" autocomplete="off">
       <input class="nda-input" id="ndaInput" type="password" placeholder="Password" aria-label="Password" autocomplete="off">
       <button class="nda-submit" type="submit">Unlock deck</button>
       <div class="nda-error" id="ndaError" role="alert"></div>
     </form>
-    <a class="nda-contact" href="mailto:hi@navidsemi.com">Request access</a>
+    <a class="nda-contact" href="mailto:contact@navidsemi.com">Request access</a>
   </div>
-  <div class="nda-foot"><span>Navid Semi · navidsemi.com</span><span>Snapp Market</span></div>
+  <div class="nda-foot"><span>Navid Semi · navidsemi.com</span></div>
 </div>
 
 <script>
